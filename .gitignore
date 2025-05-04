@@ -1,0 +1,27 @@
+# Sensitive config files
+config.php
+.env
+
+# XAMPP/MAMP specific
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+*.log
+
+# Dependency folders
+/vendor/       # If you ever use Composer
+/node_modules/ # If you use frontend tooling like npm
+
+# Cache and session files
+*.cache
+*.session
+*.bak
+*.tmp
+*.swp
