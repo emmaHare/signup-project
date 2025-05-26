@@ -1,3 +1,12 @@
+<?php
+session_start();
+require_once __DIR__ . '/../functions.php';
+
+if (isLoggedIn()) {
+    header("Location: dashboard.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,7 +15,7 @@
         <link rel="stylesheet" href="signup.css">
     </head>
     <body>
-        <form class="signup-form" action="signup_process.php" method="POST">
+        <form class="signup-form" action="signup-process.php" method="POST">
             <h2>Sign Up</h2>
 
             <div class="form-row">
