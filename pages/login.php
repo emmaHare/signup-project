@@ -1,11 +1,15 @@
 <?php
 session_start();
+require_once __DIR__ . '/../db.php';
 require_once __DIR__ . '/../functions.php';
 
 if (isLoggedIn()) {
     header("Location: dashboard.php");
     exit;
 }
+
+// Handle login if form submitted
+handleLoginRequest($pdo);
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +21,7 @@ if (isLoggedIn()) {
     </head>
     <body>
         
-        <form class="login-form" action="login-process.php" method="POST">
+        <form class="login-form" method="POST">
             <h2>Log In</h2>
 
             <div class="form-group">
