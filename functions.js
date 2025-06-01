@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const isVisible = addressSection.style.display === 'block';
             addressSection.style.display = isVisible ? 'none' : 'block';
             localStorage.setItem('addressSectionOpen', !isVisible);
+            loginHistorySection.style.display = 'none';
         });
     }
 
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const isVisible = loginHistorySection.style.display === 'block';
             loginHistorySection.style.display = isVisible ? 'none' : 'block';
             localStorage.setItem('loginHistorySectionOpen', !isVisible);
+            addressSection.style.display = 'none';
         });
     }
 
